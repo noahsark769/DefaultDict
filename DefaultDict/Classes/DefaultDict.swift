@@ -18,7 +18,7 @@ public final class DefaultDict<Key: Hashable, Value>: CustomStringConvertible {
   fileprivate var dict: Dictionary<Key, Value> = [:]
   private let factory: Factory
 
-  subscript(key: Key) -> Value {
+  public subscript(key: Key) -> Value {
     get {
       if let x = dict[key] { return x }
       let x = factory(key)
