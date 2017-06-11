@@ -14,11 +14,11 @@
  * for creating default values at access time can also be specified instead of a static value.
  */
 public final class DefaultDict<Key: Hashable, Value>: CustomStringConvertible {
-  typealias Factory = (Key) -> Value
+  public typealias Factory = (Key) -> Value
   fileprivate var dict: Dictionary<Key, Value> = [:]
   private let factory: Factory
 
-  subscript(key: Key) -> Value {
+  public subscript(key: Key) -> Value {
     get {
       if let x = dict[key] { return x }
       let x = factory(key)
@@ -35,7 +35,7 @@ public final class DefaultDict<Key: Hashable, Value>: CustomStringConvertible {
    *
    * - Parameter value: The default value to return when a nonexistent key is accessed.
    */
-  init(value: Value) {
+  public init(value: Value) {
     self.factory = { _ in value }
   }
 
@@ -46,7 +46,7 @@ public final class DefaultDict<Key: Hashable, Value>: CustomStringConvertible {
    *   is passed the key which was accessed and its return value is reported as the default value. This
    *   function will not be called on subsequent accesses of the same key (its return value will be saved).
    */
-  init(factory: @escaping Factory) {
+  public init(factory: @escaping Factory) {
     self.factory = factory
   }
 
@@ -55,7 +55,7 @@ public final class DefaultDict<Key: Hashable, Value>: CustomStringConvertible {
    *
    * - Parameter factory: A function which is called when a nonexistent key is accessed. See `init(factory:)`.
    */
-  init(factory: @escaping () -> Value) {
+  public init(factory: @escaping () -> Value) {
     self.factory = { _ in factory() }
   }
 
