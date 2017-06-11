@@ -10,7 +10,7 @@
  * A dictionary with default values.
  *
  * DefaultDict behaves in most respects like a regular dictionary, with the added fact that when a key
- * that does not exist int he dictionary is accessed, a default value will be returned. A factory method
+ * that does not exist in the dictionary is accessed, a default value will be returned. A factory method
  * for creating default values at access time can also be specified instead of a static value.
  */
 public final class DefaultDict<Key: Hashable, Value>: CustomStringConvertible {
