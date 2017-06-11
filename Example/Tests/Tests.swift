@@ -3,27 +3,46 @@ import XCTest
 import DefaultDict
 
 class Tests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+  func testBasicFunctionality() {
+    let d = DefaultDict<String, Int>(value: 0)
+    d["a"] = 1
+    XCTAssertEqual(d["a"], 1)
+    XCTAssertEqual(d["b"], 0)
+  }
+
+  func testArray() {
+    let d = DefaultDict<String, Array<String>>(value: ["default"])
+    XCTAssertEqual(d["one"], ["default"])
+    d["one"].append("two")
+    XCTAssertEqual(d["one"], ["default", "two"])
+  }
+
+  func testFactory() {
+    var value = 0
+    let d = DefaultDict<String, Int>(factory: { value })
+    XCTAssertEqual(d["one"], 0)
+    value = 1
+    XCTAssertEqual(d["two"], 1)
+    // Since one has already been assigned, it should still be zero
+    XCTAssertEqual(d["one"], 0)
+  }
+
+  func testFactoryWithKey() {
+    let d = DefaultDict<String, String>(factory: { key in key })
+    XCTAssertEqual(d["one"], "one")
+    d["two"] = "not two"
+    XCTAssertEqual(d["two"], "not two")
+  }
+
+  func testFactoryNotCalledMultipleTimes() {
+    var calls = 0
+    let d = DefaultDict<String, String> {
+      calls += 1
+      return "default"
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+    XCTAssertEqual(d["one"], "default")
+    d["one"] = "one"
+    d["one"] = "two"
+    XCTAssertEqual(calls, 1)
+  }
 }
