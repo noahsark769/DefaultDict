@@ -27,7 +27,6 @@ public final class DefaultDict<Key: Hashable, Value>: CustomStringConvertible {
     }
     set {
       dict[key] = newValue
-      print("yes")
     }
   }
 
