@@ -1,9 +1,9 @@
 # DefaultDict
 
-![CI Status](http://img.shields.io/travis/noahsark769/DefaultDict.svg?style=flat)(https://travis-ci.org/Noah Gilmore/DefaultDict)
-![Version](https://img.shields.io/cocoapods/v/DefaultDict.svg?style=flat)(http://cocoapods.org/pods/DefaultDict)
-![License](https://img.shields.io/cocoapods/l/DefaultDict.svg?style=flat)(http://cocoapods.org/pods/DefaultDict)
-![Platform](https://img.shields.io/cocoapods/p/DefaultDict.svg?style=flat)(http://cocoapods.org/pods/DefaultDict)
+[![CI Status](http://img.shields.io/travis/noahsark769/DefaultDict.svg?style=flat)](https://travis-ci.org/noahsark769/DefaultDict)
+[![Version](https://img.shields.io/cocoapods/v/DefaultDict.svg?style=flat)](http://cocoapods.org/pods/DefaultDict)
+[![License](https://img.shields.io/cocoapods/l/DefaultDict.svg?style=flat)](http://cocoapods.org/pods/DefaultDict)
+[![Platform](https://img.shields.io/cocoapods/p/DefaultDict.svg?style=flat)](http://cocoapods.org/pods/DefaultDict)
 
 ## Example
 
