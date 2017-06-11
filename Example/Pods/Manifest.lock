@@ -1,0 +1,16 @@
+PODS:
+  - DefaultDict (0.1.0)
+
+DEPENDENCIES:
+  - DefaultDict (from `../`)
+
+EXTERNAL SOURCES:
+  DefaultDict:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DefaultDict: 10ee694398af614d945d82de4dc7231a2dff1f43
+
+PODFILE CHECKSUM: 5fb31dafdfad3b8b1576a0f7b3f5b88d2f4f9921
+
+COCOAPODS: 1.2.1

@@ -1,0 +1,6 @@
+framework module DefaultDict {
+  umbrella header "DefaultDict-umbrella.h"
+
+  export *
+  module * { export * }
+}

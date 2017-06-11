@@ -1,0 +1,22 @@
+{
+  "name": "DefaultDict",
+  "version": "0.1.0",
+  "summary": "A short description of DefaultDict.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Noah Gilmore/DefaultDict",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Noah Gilmore": "noah@yelp.com"
+  },
+  "source": {
+    "git": "https://github.com/Noah Gilmore/DefaultDict.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DefaultDict/Classes/**/*"
+}
