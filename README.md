@@ -22,7 +22,7 @@ DefaultDict is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'DefaultDict', -> '1.0.0'
+pod 'DefaultDict', '~> 1.0.0'
 ```
 
 ## Development and contributing
