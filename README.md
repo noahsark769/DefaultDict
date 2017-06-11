@@ -5,11 +5,16 @@
 [![License](https://img.shields.io/cocoapods/l/DefaultDict.svg?style=flat)](http://cocoapods.org/pods/DefaultDict)
 [![Platform](https://img.shields.io/cocoapods/p/DefaultDict.svg?style=flat)](http://cocoapods.org/pods/DefaultDict)
 
-## Example
+## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+```swift
+import DefaultDict
 
-## Requirements
+let d = DefaultDict<String: String>(value: "default")
+print(d["something"]) // prints "default"
+d["something"] = "other"
+print(d["something"]) // prints "other"
+```
 
 ## Installation
 
@@ -17,12 +22,18 @@ DefaultDict is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "DefaultDict"
+pod 'DefaultDict', -> '1.0.0'
 ```
+
+## Development and contributing
+
+Contributions are welcome! Please open an issue to suggest a feature (you can assign yourself if you intent to implement it).
+
+To run tests, run `pod install` on the `Example` project and open the example workspace where you'll find the tests.
 
 ## Author
 
-Noah Gilmore, noah@yelp.com
+Noah Gilmore, noahgilmore.com
 
 ## License
 
