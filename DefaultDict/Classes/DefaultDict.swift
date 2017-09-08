@@ -60,5 +60,12 @@ public final class DefaultDict<Key: Hashable, Value>: CustomStringConvertible {
   }
 
   public var description: String { return dict.description }
+
+  /**
+   * Return the contents of the dict as a regular swift Dictionary.
+   */
+  public func asDict() -> Dictionary<Key, Value> {
+    return dict
+  }
 }
 

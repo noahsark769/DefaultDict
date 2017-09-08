@@ -45,4 +45,19 @@ class Tests: XCTestCase {
     d["one"] = "two"
     XCTAssertEqual(calls, 1)
   }
+
+  func testExportToDict() {
+    let d = DefaultDict<String, [String]>(value: [])
+    d["one"].append("two")
+    let dict = d.asDict()
+    XCTAssertEqual(dict["one"]!, ["two"])
+    XCTAssertEqual(dict.keys.count, 1)
+
+    d["one"].append("three")
+    d["two"].append("four")
+    let newDict = d.asDict()
+    XCTAssertEqual(newDict["one"]!, ["two", "three"])
+    XCTAssertEqual(newDict["two"]!, ["four"])
+    XCTAssertEqual(newDict.keys.count, 2)
+  }
 }
