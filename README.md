@@ -1,4 +1,5 @@
 # DefaultDict
+**Note: DefaultDict is still maintained, but in Swift 4 you might rather use [Swift's built in default value feature](https://developer.apple.com/documentation/swift/dictionary/2894528-subscript).**
 
 [![CI Status](http://img.shields.io/travis/noahsark769/DefaultDict.svg?style=flat)](https://travis-ci.org/noahsark769/DefaultDict)
 [![Version](https://img.shields.io/cocoapods/v/DefaultDict.svg?style=flat)](http://cocoapods.org/pods/DefaultDict)
